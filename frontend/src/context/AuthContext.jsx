@@ -37,11 +37,15 @@ export function AuthProvider({ children }) {
 
   const login = async (email, password) => {
     const res = await api.post('/auth/login', { email, password });
-    if (res?.data?.token) {
-      localStorage.setItem('almuheet_admin_token', res.data.token);
-      setToken(res.data.token);
-      setAdmin(res.data.admin);
-      return res.data;
+    const payload = res?.data || res;
+    const authToken = payload?.token || res?.token;
+    const adminUser = payload?.admin || res?.admin || { name: 'Store Administrator', email, role: 'superadmin' };
+
+    if (authToken) {
+      localStorage.setItem('almuheet_admin_token', authToken);
+      setToken(authToken);
+      setAdmin(adminUser);
+      return payload;
     }
     throw new Error('Authentication failed');
   };

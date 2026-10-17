@@ -130,6 +130,10 @@ function getFallbackData(endpoint, options = {}) {
   if (path === '/auth/login' && method === 'POST') {
     return {
       status: 'success',
+      data: {
+        token: 'demo_jwt_token_almuheet_preview',
+        admin: { name: 'Store Administrator', email: 'admin@almuheet.store', role: 'superadmin' }
+      },
       token: 'demo_jwt_token_almuheet_preview',
       admin: { name: 'Store Administrator', email: 'admin@almuheet.store', role: 'superadmin' }
     };
