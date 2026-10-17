@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E7C4"/>
+      <stop offset="35%" stop-color="#D4AF37"/>
+      <stop offset="70%" stop-color="#AA8010"/>
+      <stop offset="100%" stop-color="#E5C158"/>
+    </linearGradient>
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Luxury Monogram Emblem -->
+  <g transform="translate(10, 10)">
+    <!-- Outer Diamond / Star Frame -->
+    <rect x="12" y="12" width="56" height="56" rx="4" transform="rotate(45 40 40)" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.75" />
+    <circle cx="40" cy="40" r="28" fill="#0D0D11" stroke="url(#goldGrad)" stroke-width="1.2" />
+    
+    <!-- Fragrance Drop & Arabic / Monogram motif -->
+    <path d="M40 22 C43 28 50 35 50 42 C50 48 45.5 53 40 53 C34.5 53 30 48 30 42 C30 35 37 28 40 22 Z" fill="none" stroke="url(#goldGrad)" stroke-width="1.2"/>
+    <circle cx="40" cy="42" r="3.5" fill="url(#goldGrad)" />
+    <!-- Monogram letters A & M delicate serif hints -->
+    <path d="M34 46 L37 38 L40 43 L43 38 L46 46" fill="none" stroke="url(#goldGrad)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <!-- Main Title -->
+  <text x="105" y="48" font-family="'Cinzel', 'Playfair Display', 'Cormorant Garamond', 'Trajan Pro', serif" font-size="28" font-weight="600" letter-spacing="4.5" fill="url(#goldGrad)" filter="url(#subtleGlow)">
+    AL MUHEET
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="107" y="70" font-family="'Inter', 'Montserrat', 'Helvetica Neue', sans-serif" font-size="9" font-weight="400" letter-spacing="6" fill="#C5A059" opacity="0.9">
+    HAUTE PARFUMERIE
+  </text>
+
+  <!-- Elegant separator dot or line -->
+  <line x1="285" y1="67" x2="360" y2="67" stroke="url(#goldGrad)" stroke-width="0.75" opacity="0.5"/>
+</svg>
